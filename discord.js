@@ -1,0 +1,33 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+	console.log(`호호잇	${client.user.tag}이 가동중입니당이아아~`);
+});
+
+client.on('message', msg => {
+	if (msg.author.bot) return;
+	if (msg.author.id === client.user.id) return;
+
+	if(msg.content ==='!자기소개')
+  {
+    const embed =  new Discord.MessageEmbed()
+    .setAuthor("짱구","https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA5MTJfOTkg%2FMDAxNTA1MjIzNTc4MDkx.8zZGjFFTY1G3GOCSOyNqBCeUrVLAESgmcxUZhqIJlnkg.McM1Q8QBp943WFK6Cmqlum_-Yp-p6kN3_DOsInRue4Yg.JPEG.dbzl2963%2FFB_IMG_1505222004208.jpg&type=sc960_832")
+    .setTitle("선민재(클릭 시 인스타로 이동)")
+    .setURL("https://www.instagram.com/min._.jae__05/")
+    .setColor(0xFFB2F5)
+    .setDescription("안녕?? 난 짱구야~!! 선민재를 소개 해줄게")
+    .setThumbnail("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA5MTJfOTkg%2FMDAxNTA1MjIzNTc4MDkx.8zZGjFFTY1G3GOCSOyNqBCeUrVLAESgmcxUZhqIJlnkg.McM1Q8QBp943WFK6Cmqlum_-Yp-p6kN3_DOsInRue4Yg.JPEG.dbzl2963%2FFB_IMG_1505222004208.jpg&type=sc960_832")
+    .addField("학교","광주 소프트웨어 마이스터고등학교 재학중!", true)
+    .addField("학번","1-4반!", true)
+    .addField("출생","2005년 09월 17일")
+    .addField("MBTI","ENFJ")
+    .addField("전공","서버(예비),IOT")
+    .setImage("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA5MTJfOTkg%2FMDAxNTA1MjIzNTc4MDkx.8zZGjFFTY1G3GOCSOyNqBCeUrVLAESgmcxUZhqIJlnkg.McM1Q8QBp943WFK6Cmqlum_-Yp-p6kN3_DOsInRue4Yg.JPEG.dbzl2963%2FFB_IMG_1505222004208.jpg&type=sc960_832")
+    .setTimestamp(new Date())
+    .setFooter("여기까지~")
+    msg.channel.send(embed);
+  }
+});
+
+client.login('ODYyNzAyOTQ5OTI1NzgxNTY0.YOcMuw.YNlyOibpgE5eO6uCsVl38wNvBMs');
