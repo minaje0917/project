@@ -149,4 +149,4 @@ ${winner==="비김" ? "비겼네? 한판 더 하자." : winner + "의 승리야"
 
 });
 
-client.login('ODYxOTI1MjYzNTUwMTg1NTMz.YOQ4dA.KI08iDdQ_ZqsyIUTvtD09WQlZHg');
+client.login('');
